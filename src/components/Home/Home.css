@@ -1,0 +1,204 @@
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.landingBackground {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(/assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.landingContainer {
+    width: 100%;
+    height: 100vh;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+}
+
+.landingContent {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 165px;
+    width: 50%;
+}
+
+.landingTitle {
+    color: #D0D6F9;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+    margin-bottom: 20px;
+    width: 450px;
+}
+
+.landingTitleSpace {
+    font-family: 'bellefair';
+    font-size: 150px;
+    color: #FFFFFF;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.landingText {
+    color: #D0D6F9;
+    font-family: 'barlow';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 33px;
+    width: 450px;
+}
+
+.landingButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.landingButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    font-size: 35px;
+    font-family: 'bellefair';
+    color: #0B0D17;
+    margin-top: 55px;
+    margin-left: 100px;
+    z-index: 1;
+}
+
+.landingButtonLayout {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: 55px;
+    margin-left: 100px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.landingButton:hover + .landingButtonLayout {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    opacity: 0.15;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media screen and (max-width: 1024px) {
+    .landingTitle {
+        font-size: 18px;
+        margin-bottom: 10px;
+        width: 400px;
+    }
+    .landingTitleSpace {
+        font-size: 110px;
+        margin-bottom: 10px;
+    }
+    .landingText {
+        font-size: 14px;
+        width: 320px;
+    }
+    .landingButton {
+        padding: 50px;
+        width: 180px;
+        height: 180px;
+        font-size: 25px;
+        margin-left: 60px;
+    }
+    .landingButtonLayout {
+        width: 180px;
+        height: 180px;
+        margin-left: 60px;
+    }
+    .landingButton:hover + .landingButtonLayout {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .landingBackground {
+        background-image: url(/assets/home/background-home-tablet.jpg);
+    }
+    .landingContainer {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 70px;
+    }
+    .landingContent {
+        padding: 0;
+        align-items: center;
+        width: 100%;
+    }
+    .landingButton {
+        margin: 0;
+        margin-bottom: 50px;
+    }
+    .landingButtonLayout {
+        margin: 0 0 50px 0;
+    }
+    .landingTitle {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .landingTitleSpace {
+        font-size: 145px;
+        margin-bottom: 10px;
+    }
+    .landingText {
+        font-size: 16px;
+        width: 420px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .landingBackground {
+        background-image: url(/assets/home/background-home-mobile.jpg);
+    }
+    .landingContainer {
+        margin-top: 40px;
+    }
+    .landingTitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .landingTitleSpace {
+        font-size: 89px;
+        margin-bottom: 20px;
+    }
+    .landingText {
+        font-size: 14px;
+        line-height: 25px;
+        width: 80%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .landingButtonLayout {
+        display: none;
+    }
+}

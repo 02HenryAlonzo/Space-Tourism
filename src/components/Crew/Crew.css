@@ -1,0 +1,265 @@
+.crewLanding {
+    width: 100vw;
+    height: 100vh;
+}
+
+.crewBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../public//assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -2;
+    opacity: 0.5;
+}
+
+.crewGlobalContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.crewGlobalContent {
+    display: flex;
+    width: 1200px;
+    height: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.titleContainer {
+    width: 1200px;
+    margin: 30px auto 0;
+}
+
+.crewContent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+
+}
+
+img {
+    height: 100%;
+}
+
+.crewPicture {
+    height: 100%;
+}
+
+.crewInformations {
+    text-align: left;
+}
+
+.crewRole {
+    text-transform: uppercase;
+    color: #ffffff6c;
+    font-family: "Bellefair";
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.crewMember {
+    color: #FFFFFFFF;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "Bellefair";
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.crewDescription {
+    color: #D0D6F9;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 40px;
+    width: 90%;
+    margin-top: 30px;
+}
+
+.radioContainer {
+    display: flex;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+input[type="radio"] {
+    appearance: none;
+}
+
+.radioButton {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #FFFFFFFF;
+    opacity: 0.3;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.radioButton:hover {
+    opacity: 0.5;
+}
+
+.radioButtonActive {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #FFFFFFFF;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media screen and (min-width: 1440px) {
+    .crewPicture img {
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .crewGlobalContainer {
+        padding: 0;
+    }
+    .crewGlobalContainer .titleContainer {
+        padding-left: 165px;
+    }
+    .crewGlobalContent {
+        flex-direction: column;
+        align-items: center;
+    }
+    .crewContent {
+        align-items: center;
+        width: 70%;
+        margin-top: 50px;
+        margin-top: 80px;
+    }
+    .crewInformations {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .crewRole {
+        font-size: 28px;
+    }
+    .crewMember {
+        font-size: 39px;
+        margin-top: 20px;
+    }
+    .crewDescription {
+        font-size: 20px;
+        line-height: 30px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .radioContainer {
+        padding-top: 40px;
+    }
+
+    .radioButton {
+        width: 15px;
+        height: 15px;
+    }
+    .radioButtonActive {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .crewGlobalContainer .titleContainer {
+        padding-left: 0;
+    }
+    .crewGlobalContainer {
+        padding: 0 45px;
+    }
+    .crewRole {
+        font-size: 25px;
+    }
+    .crewPicture {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+    .crewMember {
+        font-size: 39px;
+        margin-top: 10px;
+    }
+    .crewDescription {
+        font-size: 19px;
+        font-weight: 200;
+        margin-top: 15px;
+    }
+    .radioContainer {
+        padding-top: 35px;
+    }
+
+    .radioButton {
+        width: 11px;
+        height: 11px;
+    }
+    .radioButtonActive {
+        width: 11px;
+        height: 11px;
+    }
+    .crewPicture img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .crewGlobalContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        margin-top: 0;
+        height: auto;
+    }
+    .crewContent {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        margin-top: 0;
+        padding: 0 15px;
+        width: 100%;
+    }
+    .crewGlobalContent {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .crewPicture {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        width: 100%;
+    }
+    .crewPicture img {
+        width: 50%;
+    }
+    .pictureLine {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.103);
+    } 
+    .radioContainer {
+        padding-top: 35px;
+    }
+    .crewRole {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .crewMember {
+        font-size: 26px;
+    }
+    .crewDescription {
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 20px;
+        padding-bottom: 30px;
+    }
+}
+
